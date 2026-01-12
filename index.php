@@ -16,18 +16,8 @@ include "koneksi.php";
     />
   </head>
   <body>
-    <?php
-$gallery = mysqli_query($conn,"SELECT * FROM gallery");
-foreach($gallery as $g):
-?>
-  <div>
-    <img src="img/<?= $g['image'] ?>" width="200">
-    <h4><?= $g['title'] ?></h4>
-  </div>
-<?php endforeach; ?>
+   
 
-
-    
     <!-- nav begin -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
   <div class="container">
@@ -210,6 +200,16 @@ foreach($gallery as $g):
     <section id="gallery" class="text-center p-5 bg-danger-subtle">
     <div class="container mt-4">
         <h1 class="fw-bold display-4 pb-3">Gallery</h1>
+
+         <?php
+$gallery = mysqli_query($conn,"SELECT * FROM gallery");
+foreach($gallery as $g):
+?>
+  <div>
+    <img src="img/<?= $g['image'] ?>" width="200">
+    <h4><?= $g['title'] ?></h4>
+  </div>
+<?php endforeach; ?>
 
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

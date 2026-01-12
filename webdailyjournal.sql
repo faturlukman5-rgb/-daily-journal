@@ -3,17 +3,14 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Waktu pembuatan: 10 Jan 2026 pada 11.28
-=======
 -- Waktu pembuatan: 12 Jan 2026 pada 13.41
->>>>>>> 706bc59 (Update seluruh file project)
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -60,34 +57,17 @@ INSERT INTO `article` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VA
 
 CREATE TABLE `gallery` (
   `id` int(11) NOT NULL,
-<<<<<<< HEAD
-  `judul` varchar(150) NOT NULL,
-  `keterangan` text NOT NULL,
-  `foto` varchar(255) DEFAULT NULL,
-  `tanggal` datetime DEFAULT NULL,
-  `username` varchar(50) DEFAULT NULL
-=======
   `judul` text NOT NULL,
   `isi` text NOT NULL,
   `gambar` text NOT NULL,
   `tanggal` datetime NOT NULL,
   `username` varchar(50) NOT NULL
->>>>>>> 706bc59 (Update seluruh file project)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data untuk tabel `gallery`
 --
 
-<<<<<<< HEAD
-INSERT INTO `gallery` (`id`, `judul`, `keterangan`, `foto`, `tanggal`, `username`) VALUES
-(1, 'Timnas', 'Timnas Indonesia sedang berjuang untuk mendapatkan tiket menuju piala dunia', 'timnas.jpg', '2025-12-26 14:42:08', 'admin'),
-(2, 'Main Game', 'Saat ada waktu kosong atau setelah pulang kuliah teman-teman mengajak untuk bermain PS di sekitar rumah salah satu teman', 'fifa25.jpg', '2025-12-10 09:25:41', 'admin'),
-(3, 'Kuliah', 'Kegiatan rutin saya saat ini adalah berkuliah di Universitas Dian Nuswantoro', 'kuliah.jpg', '2025-12-10 09:10:50', 'admin'),
-(4, 'Belajar Kelompok', 'Belajar kelompok untuk mengerjakan tugas yang diberikan oleh dosen agar mendapatkan nilai yang bagus', 'belajar_kelompok.jpg', '2025-12-10 09:10:50', 'admin'),
-(5, 'Menonton Bola', 'Menonton pertandingan bola tentang timnas, club favorit yang telah ditunggu waktu bermain', 'menonton_bola.jpg', '2025-12-10 09:10:50', 'admin'),
-(6, 'Belajar', 'Pada malam hari belajar materi yang dipelajari tadi di kelas dan untuk materi besok', 'belajar.jpg', '2025-12-10 09:10:50', 'admin');
-=======
 INSERT INTO `gallery` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VALUES
 (1, 'Timnas\r\n', 'Tinmas indonesia sedang berjuang untuk memdapatkan tiket menuju piala dunia\r\n\r\n', 'timnas.jpg', '2026-01-11 15:30:40', 'admin'),
 (2, 'Main Game\r\n', 'saat ada waktu kosong atau Setelah pulang kuliah teman-teman mengajak untuk bermain PS disekitar rumah salah satu teman\r\n\r\n', 'fc25.jpg', '2026-01-11 15:34:17', 'admin'),
@@ -95,7 +75,6 @@ INSERT INTO `gallery` (`id`, `judul`, `isi`, `gambar`, `tanggal`, `username`) VA
 (4, 'Belajar Kelompok\r\n', 'belajar kelompok untuk mengerjakan tugas yg di berikan oleh dosen agar mendapat nilai yang bagusv', 'kerjakelompok.jpg', '2026-01-11 15:35:05', 'admin'),
 (5, 'menonton bola indo', 'barca vs madrid', 'bola.jpg', '2026-01-12 16:09:48', 'admin'),
 (6, 'Belajar', 'Pada malam hari belajar materi yang dipelajari tadi dikelas dan untuk materi besok', 'Belajar.jpg', '2026-01-11 15:37:13', 'admin');
->>>>>>> 706bc59 (Update seluruh file project)
 
 -- --------------------------------------------------------
 
@@ -124,56 +103,31 @@ INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
 (14, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '');
 
 --
--- Indexes for dumped tables
+-- Indexes
 --
 
---
--- Indeks untuk tabel `article`
---
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id`);
 
---
--- Indeks untuk tabel `gallery`
---
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
---
--- Indeks untuk tabel `user`
---
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT
 --
 
---
--- AUTO_INCREMENT untuk tabel `article`
---
 ALTER TABLE `article`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
->>>>>>> 706bc59 (Update seluruh file project)
 
---
--- AUTO_INCREMENT untuk tabel `gallery`
---
 ALTER TABLE `gallery`
-<<<<<<< HEAD
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-=======
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
->>>>>>> 706bc59 (Update seluruh file project)
 
---
--- AUTO_INCREMENT untuk tabel `user`
---
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

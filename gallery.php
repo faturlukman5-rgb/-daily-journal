@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <div class="container">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
@@ -161,12 +161,9 @@ if (isset($_POST['hapus'])) {
     $conn->close();
 }
 ?>
-=======
+
 <div class="container">
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
-        <i class="bi bi-plus-lg"></i> Tambah Gallery
-    </button>
+    
 
     <div class="row">
         <div class="table-responsive" id="gallery_data"></div>
@@ -324,4 +321,4 @@ if (isset($_POST['hapus'])) {
     $conn->close();
 }
 ?>
->>>>>>> 706bc59 (Update seluruh file project)
+
