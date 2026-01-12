@@ -98,7 +98,7 @@ INSERT INTO `user` (`id`, `username`, `password`, `foto`) VALUES
 (9, 'bagogo', 'pagihari', ''),
 (10, 'zaki', 'onicayam', ''),
 (12, 'surya', 'abcde', ''),
-(13, 'danny', 'admin', ''),
+(13, 'danny', '21232f297a57a5a743894a0e4a801fc3', ''),
 (14, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '');
 
 --
