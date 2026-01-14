@@ -8,20 +8,23 @@ if (isset($_POST['aksi']) && $_POST['aksi'] == 'simpan') {
 
     $id       = $_POST['id'];
     $username = $_POST['username'];
-    $password = $_POST['password'];
+
+    // PASSWORD DIKUNCI = admin
+    $password_hashed = md5('admin');
 
     if ($id == "") {
         $stmt = $conn->prepare("INSERT INTO user (username, password) VALUES (?,?)");
-        $stmt->bind_param("ss", $username, $password);
+        $stmt->bind_param("ss", $username, $password_hashed);
     } else {
-        $stmt = $conn->prepare("UPDATE user SET username=?, password=? WHERE id=?");
-        $stmt->bind_param("ssi", $username, $password, $id);
+        $stmt = $conn->prepare("UPDATE user SET username=? WHERE id=?");
+        $stmt->bind_param("si", $username, $id);
     }
 
     $stmt->execute();
     $stmt->close();
     exit;
 }
+
 
 /* ======================
    HAPUS
